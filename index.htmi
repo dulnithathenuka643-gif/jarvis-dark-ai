@@ -23,7 +23,7 @@ body{
   position:fixed;
   inset:0;
   z-index:99999;
-  background:#000 url('jarvis-heart.jpg') center 48%/cover no-repeat;
+  background:#000 url('file_00000000ff408207a6732cceca98934a.png') center 48%/cover no-repeat;
   display:flex;
   flex-direction:column;
   align-items:center;
