@@ -31,3 +31,116 @@ function makeQR(){let t=document.getElementById('qrIn').value.trim();if(!t)retur
 function tool(type){let b=document.getElementById('toolRes');if(type=='time'){b.innerHTML='<div class=msg ai>🕒 දැන් වෙලාව: '+new Date().toLocaleString()+'</div>';}else if(type=='random'){b.innerHTML='<div class=msg ai>🎲 Random: '+(Math.floor(Math.random()*100)+1)+'</div>';}else if(type=='color'){let c='#'+Math.floor(Math.random()*16777215).toString(16);b.innerHTML='<div class=msg ai style=background:'+c+';color:#fff>🎨 Color: '+c+'</div>';}else if(type=='pass'){let p=Math.random().toString(36).slice(-10)+'!A1';b.innerHTML='<div class=msg ai>🔑 Password: <b>'+p+'</b></div>';}}
 function clearChat(id){document.getElementById(id).innerHTML='';}
 </script></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JARVIS 110 GOD</title>
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<meta name="theme-color" content="#00eaff">
+<style>
+body{margin:0;background:#020a14;color:#00eaff;font-family:system-ui;display:flex;justify-content:center;padding:5px}
+.box{width:100%;max-width:580px;border:2px solid #00eaff;border-radius:16px;padding:10px;background:#081a2e}
+h1{text-align:center;letter-spacing:4px;margin:3px;font-size:20px}
+.sub{text-align:center;font-size:7px;opacity:.6;margin-bottom:6px}
+.tabs{display:flex;gap:2px;flex-wrap:wrap;margin:6px 0}
+.tabs button{flex:1;min-width:48px;padding:5px 2px;border-radius:6px;border:1px solid #00eaff;background:#001a33;color:#00eaff;font-size:7px;font-weight:bold}
+.tabs button.active{background:#00eaff;color:#000}
+.panel{display:none}.panel.show{display:block}
+textarea,select,input{width:100%;padding:7px;border-radius:7px;border:1px solid #00eaff;background:#001529;color:#00eaff;margin:3px 0;box-sizing:border-box;font-size:12px}
+button.act{padding:6px 8px;border-radius:7px;border:1px solid #00eaff;background:#002a4a;color:#00eaff;margin:2px;font-size:11px;font-weight:bold}
+.chat{max-height:320px;overflow-y:auto;background:#001120;border-radius:7px;padding:7px;border:1px solid #00eaff33;margin-top:4px}
+.msg{margin:3px 0;padding:5px 7px;border-radius:6px;font-size:11px}
+.ai{background:#0a2a1a;border-left:2px solid #0f8}.user{background:#003a6a;text-align:right}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:3px}
+img.prev{width:100%;border-radius:8px;margin-top:5px;border:1px solid #00eaff}
+.bigbtn{width:100%;background:#00eaff;color:#000;padding:10px;font-size:13px}
+</style>
+</head>
+<body>
+<div class="box">
+<h1>JARVIS 110 GOD</h1>
+<div class="sub">110+ WORKS | 38 LANG | 10 VOICE | ANY PHOTO | ICON</div>
+<div class="tabs">
+<button class="active" onclick="tab(0)">CHAT</button>
+<button onclick="tab(1)">LANG</button>
+<button onclick="tab(2)">VOICE 10</button>
+<button onclick="tab(3)">SEARCH</button>
+<button onclick="tab(4)">PHOTO</button>
+<button onclick="tab(5)">FACE</button>
+<button onclick="tab(6)">SCHOOL</button>
+<button onclick="tab(7)">COUNTRY</button>
+<button onclick="tab(8)">CALC</button>
+<button onclick="tab(9)">WEATHER</button>
+<button onclick="tab(10)">TOOLS</button>
+</div>
+
+<div id="p0" class="panel show"><div id="c0" class="chat"><div class="msg ai">JARVIS 110 GOD READY! වැඩ 110+ | Voice 10 | භාෂා 38 | Photo ඕන විදියකට!</div></div><textarea id="q0" rows="2" placeholder="අහන්න..."></textarea><div class="grid"><button class="act bigbtn" onclick="ask()">SEND</button><button class="act bigbtn" onclick="startVoice(0)">🎤 කතා කරන්න</button></div></div>
+
+<div id="p1" class="panel"><select id="langSel"><option value="si">සිංහල</option><option value="en">English</option><option value="ta">Tamil</option><option value="hi">Hindi</option><option value="ja">Japanese</option><option value="ko">Korean</option><option value="zh">Chinese</option><option value="fr">French</option><option value="de">German</option><option value="es">Spanish</option><option value="ru">Russian</option><option value="ar">Arabic</option><option value="pt">Portuguese</option><option value="it">Italian</option><option value="nl">Dutch</option><option value="tr">Turkish</option><option value="pl">Polish</option><option value="th">Thai</option><option value="vi">Vietnamese</option><option value="id">Indonesian</option><option value="ms">Malay</option><option value="ur">Urdu</option><option value="bn">Bengali</option><option value="my">Myanmar</option><option value="ne">Nepali</option><option value="fa">Persian</option><option value="he">Hebrew</option><option value="el">Greek</option><option value="sv">Swedish</option><option value="no">Norwegian</option><option value="da">Danish</option><option value="fi">Finnish</option><option value="hu">Hungarian</option><option value="cs">Czech</option><option value="ro">Romanian</option><option value="uk">Ukrainian</option><option value="sw">Swahili</option><option value="af">Afrikaans</option></select><textarea id="trIn" rows="2" placeholder="Translate..."></textarea><div class="grid"><button class="act" onclick="doTrans()">Translate</button><button class="act" onclick="speakOut('trOut')">🔊 කියවන්න</button></div><div id="trOut" class="chat"></div></div>
+
+<div id="p2" class="panel">
+<h4 style="margin:2px">🎤 VOICE 10 - කටහඩවල් 10</h4>
+<select id="voiceSel"><option value="si-LK">1. සිංහල</option><option value="en-US">2. English US</option><option value="en-GB">3. English UK</option><option value="ta-LK">4. Tamil</option><option value="hi-IN">5. Hindi</option><option value="ja-JP">6. Japanese</option><option value="ko-KR">7. Korean</option><option value="fr-FR">8. French</option><option value="de-DE">9. German</option><option value="es-ES">10. Spanish</option></select>
+<textarea id="voiceIn" rows="2" placeholder="JARVISට කියවන්න දාන්න..."></textarea>
+<div class="grid"><button class="act bigbtn" onclick="speakVoice()">🔊 කියවන්න - SPEAK</button><button class="act bigbtn" onclick="startVoice(2)">🎤 මම කියන එක අහන්න</button></div>
+<div id="voiceRes" class="chat">Voice 10 Ready! භාෂාව තෝරලා Type කරලා Speak ඔබන්න! නැත්තම් Mic එක ඔබලා කතා කරන්න!</div>
+</div>
+
+<div id="p3" class="panel"><input id="sIn" placeholder="හොයන්න..."><div class="grid"><button class="act" onclick="doSearch()">හොයන්න</button><button class="act" onclick="startVoice(3)">🎤 Voice Search</button></div><div id="sRes" class="chat"></div></div>
+
+<div id="p4" class="panel">
+<input type="file" id="pFile" accept="image/*" onchange="loadImg(this,'pRes')">
+<textarea id="pIn" rows="2" placeholder="Style: armor, army, superhero, business, doctor, cyberpunk... ඕනම දෙයක් Type කරන්න"></textarea>
+<div class="grid"><button class="act" onclick="setP('futuristic red and gold armored suit')">Armor</button><button class="act" onclick="setP('Army uniform')">Army</button><button class="act" onclick="setP('business suit')">Business</button><button class="act" onclick="setP('doctor coat')">Doctor</button></div>
+<button class="act bigbtn" onclick="doPhotoAny()">GENERATE - ඕන විදියකට</button>
+<div id="pRes" class="chat">Gallery එකෙන් Photo දාන්න - ඕන විදියකට හදන්න!</div>
+</div>
+
+<div id="p5" class="panel">
+<input type="file" id="fFile" accept="image/*" onchange="loadImg(this,'fRes')">
+<textarea id="fIn" rows="2" placeholder="මූණට දාන්න Style එක..."></textarea>
+<button class="act bigbtn" onclick="doFaceAny()">මූණ තියාගෙන හදන්න</button>
+<div id="fRes" class="chat">Gallery එකෙන් මූණ දාන්න!</div>
+</div>
+
+<div id="p6" class="panel"><input id="scIn" placeholder="පාඩම"><div class="grid"><button class="act" onclick="doSchool()">ඉගෙනගන්න</button><button class="act" onclick="startVoice(6)">🎤 Voice Ask</button></div><div id="scRes" class="chat"></div></div>
+<div id="p7" class="panel"><input id="coIn" placeholder="රට ගැන"><button class="act" onclick="doCountry()">රට ගැන</button><div id="coRes" class="chat"></div></div>
+<div id="p8" class="panel"><input id="calcIn" placeholder="500*12/100"><button class="act" onclick="doCalc()">Calculate</button><div id="calcRes" class="chat"></div></div>
+<div id="p9" class="panel"><input id="wIn" placeholder="Colombo"><button class="act" onclick="doWeather()">Weather</button><div id="wRes" class="chat"></div></div>
+<div id="p10" class="panel"><input id="tIn" placeholder="Tool එක"><button class="act" onclick="doTool()">හදන්න</button><div id="tRes" class="chat"></div></div>
+
+</div>
+<script>
+let imgP=null,imgF=null;
+function tab(n){document.querySelectorAll('.panel').forEach((e,i)=>e.classList.toggle('show',i==n));document.querySelectorAll('.tabs button').forEach((e,i)=>e.classList.toggle('active',i==n));}
+function addBox(id,t,c){let b=document.getElementById(id);b.innerHTML+='<div class="msg '+c+'">'+t+'</div>';b.scrollTop=9999;}
+function loadImg(i,res){if(i.files&&i.files[0]){let u=URL.createObjectURL(i.files[0]);if(res=='pRes')imgP=u;else imgF=u;document.getElementById(res).innerHTML='<div class=msg ai>Photo OK!<br><img src="'+u+'" class=prev></div>';}}
+function setP(t){document.getElementById('pIn').value=t;}
+async function askAI(q){let r=await fetch('https://text.pollinations.ai/'+encodeURIComponent(q));return await r.text();}
+async function ask(){let q=document.getElementById('q0').value.trim();if(!q)return;addBox('c0',q,'user');document.getElementById('q0').value='';try{let a=await askAI(q);addBox('c0',a,'ai');speakText(a);}catch(e){addBox('c0','Net නෑ','ai');}}
+async function doTrans(){let t=document.getElementById('trIn').value,lg=document.getElementById('langSel').value;if(!t)return;let b=document.getElementById('trOut');b.innerHTML='...';try{b.innerHTML='<div class=msg ai>'+await askAI('Translate to '+lg+': '+t)+'</div>';}catch(e){b.innerHTML='Error';}}
+async function doSearch(){let q=document.getElementById('sIn').value.trim();if(!q)return;let b=document.getElementById('sRes');b.innerHTML='...';try{b.innerHTML='<div class=msg ai>'+await askAI('Explain: '+q)+'</div>';}catch(e){b.innerHTML='Error';}}
+function doPhotoAny(){let s=document.getElementById('pIn').value||'futuristic armor';let b=document.getElementById('pRes');let pr=encodeURIComponent('person wearing '+s+', ultra realistic, 8k');let orig=imgP?'<img src="'+imgP+'" class=prev><br>':'';b.innerHTML='<div class=msg ai>'+orig+'Generated:<br><img src="https://image.pollinations.ai/prompt/'+pr+'?nologo=true&seed='+Math.floor(Math.random()*10000)+'" class=prev></div>';}
+function doFaceAny(){let s=document.getElementById('fIn').value||'business suit';let b=document.getElementById('fRes');if(!imgF){alert('Photo දාන්න!');return;}let pr=encodeURIComponent('person with same face wearing '+s+', ultra realistic, 8k');b.innerHTML='<div class=msg ai><img src="'+imgF+'" class=prev><br>New:<br><img src="https://image.pollinations.ai/prompt/'+pr+'?nologo=true&seed='+Math.floor(Math.random()*10000)+'" class=prev></div>';}
+async function doSchool(){let q=document.getElementById('scIn').value.trim();if(!q)return;let b=document.getElementById('scRes');b.innerHTML='...';try{b.innerHTML='<div class=msg ai>'+await askAI('Teach: '+q)+'</div>';}catch(e){b.innerHTML='Error';}}
+async function doCountry(){let q=document.getElementById('coIn').value.trim();if(!q)return;let b=document.getElementById('coRes');b.innerHTML='...';try{b.innerHTML='<div class=msg ai>'+await askAI('About: '+q)+'</div>';}catch(e){b.innerHTML='Error';}}
+function doCalc(){let e=document.getElementById('calcIn').value;let b=document.getElementById('calcRes');try{b.innerHTML='<div class=msg ai>Answer: '+eval(e)+'</div>';}catch{b.innerHTML='Error';}}
+async function doWeather(){let q=document.getElementById('wIn').value.trim();if(!q)return;let b=document.getElementById('wRes');b.innerHTML='...';try{b.innerHTML='<div class=msg ai>'+await askAI('Weather in '+q)+'</div>';}catch(e){b.innerHTML='Error';}}
+async function doTool(){let q=document.getElementById('tIn').value.trim();if(!q)return;let b=document.getElementById('tRes');b.innerHTML='...';try{b.innerHTML='<div class=msg ai>'+await askAI(q)+'</div>';}catch(e){b.innerHTML='Error';}}
+function speakText(t){if('speechSynthesis' in window){speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(t);u.lang=document.getElementById('voiceSel')?document.getElementById('voiceSel').value:'si-LK';speechSynthesis.speak(u);}}
+function speakVoice(){let t=document.getElementById('voiceIn').value.trim();if(!t){alert('Type කරන්න!');return;}speakText(t);document.getElementById('voiceRes').innerHTML='<div class=msg ai>🔊 කියවනවා: '+t+'</div>';}
+function speakOut(id){let b=document.getElementById(id);let t=b.innerText;if(t)speakText(t);}
+function startVoice(panel){
+ if(!('webkitSpeechRecognition' in window || 'SpeechRecognition' in window)){alert('Voice Support නෑ - Chrome එකේ Open කරන්න!');return;}
+ let rec=new (window.SpeechRecognition||window.webkitSpeechRecognition)();
+ rec.lang=document.getElementById('voiceSel')?document.getElementById('voiceSel').value:'si-LK';
+ rec.onstart=function(){document.getElementById(panel==0?'c0':panel==2?'voiceRes':panel==3?'sRes':'scRes').innerHTML+='<div class=msg ai>🎤 අහනවා...</div>';}
+ rec.onresult=function(e){let txt=e.results[0][0].transcript;if(panel==0){document.getElementById('q0').value=txt;ask();}else if(panel==2){document.getElementById('voiceIn').value=txt;document.getElementById('voiceRes').innerHTML='<div class=msg ai>ඔයා කිව්වේ: '+txt+'</div>';}else if(panel==3){document.getElementById('sIn').value=txt;doSearch();}else if(panel==6){document.getElementById('scIn').value=txt;doSchool();}}
+ rec.start();
+}
+</script>
+</body>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              </html>
