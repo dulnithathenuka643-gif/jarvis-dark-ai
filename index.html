@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JARVIS DARK AI</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #050a12;
+  color: #00eaff;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.container {
+  width: 90%;
+  max-width: 500px;
+  padding: 30px 20px;
+  border: 1px solid #00eaff;
+  border-radius: 20px;
+  box-shadow: 0 0 25px #007c91;
+}
+h1 {
+  font-size: 34px;
+  letter-spacing: 4px;
+  text-shadow: 0 0 15px #00eaff;
+}
+.circle {
+  width: 150px;
+  height: 150px;
+  margin: 25px auto;
+  border: 3px solid #00eaff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  box-shadow: 0 0 25px #00eaff;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  50% { box-shadow: 0 0 45px #00eaff; }
+}
+p { color: #b7faff; }
+button, select, input {
+  padding: 13px;
+  margin: 7px;
+  border: 1px solid #00eaff;
+  border-radius: 10px;
+  background: #071b29;
+  color: #00eaff;
+  font-size: 15px;
+}
+button { cursor: pointer; }
+#answer { min-height: 45px; margin-top: 20px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>JARVIS</h1>
+  <p>ADVANCED PERSONAL AI ASSISTANT</p>
+  <div class="circle">◉</div>
+  <p id="status">SYSTEM ONLINE</p>
+
+  <select id="language">
+    <option value="en-US">English</option>
+    <option value="si-LK">සිංහල</option>
+    <option value="ta-IN">தமிழ்</option>
+  </select>
+
+  <br>
+  <input id="question" placeholder="Talk to JARVIS...">
+  <br>
+  <button onclick="askJarvis()">SEND</button>
+  <button onclick="speak()">🔊 SPEAK</button>
+  <div id="answer">Hello! I am JARVIS.</div>
+</div>
+
+<script>
+let reply = "Hello! I am JARVIS. How can I help you?";
+function askJarvis() {
+  let q = document.getElementById("question").value.trim();
+  let lang = document.getElementById("language").value;
+  if (!q) {
+    document.getElementById("answer").innerText =
+      "Please type a message.";
+    return;
+  }
+  if (lang === "si-LK") {
+    reply = "ආයුබෝවන්! මම JARVIS. ඔබගේ පණිවිඩය ලැබුණා: " + q;
+  } else if (lang === "ta-IN") {
+    reply = "வணக்கம்! நான் JARVIS. உங்கள் செய்தி கிடைத்தது: " + q;
+  } else {
+    reply = "Hello! I received your message: " + q;
+  }
+  document.getElementById("answer").innerText = reply;
+}
+function speak() {
+  if ("speechSynthesis" in window) {
+    let lang = document.getElementById("language").value;
+    let voice = new SpeechSynthesisUtterance(reply);
+    voice.lang = lang;
+    speechSynthesis.speak(voice);
+  } else {
+    document.getElementById("status").innerText =
+      "Speech is not supported in this browser.";
+  }
+}
+</script>
+</body>
+</html>
