@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>JARVIS ULTIMATE 600+ GOD MODE - ALL PROMPTS FROM MORNING</title>
+<style>
+/* ================= GOOGLE FONTS ================= */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800&family=Inter:wght@400;500;700&display=swap');
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:#000;
+  display:flex;
+  justify-content:center;
+  color:#c8f7ff;
+  font-family:Inter;
+  min-height:100vh;
+  overflow-x:hidden
+}
+/* ================= ENTRY - HEART REACTOR - TODAY NEW REQUEST ================= */
+#entry{
+  position:fixed;
+  inset:0;
+  z-index:99999;
+  background:#000 url('jarvis-heart.jpg') center 48%/cover no-repeat;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:space-between;
+  padding:55px 20px 30px;
+  transition:1.2s cubic-bezier(.7,0,.3,1);
+  cursor:pointer;
+  user-select:none
+}
+#entry::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(700px at 50% 40%,rgba(0,242,255,.15),transparent 60%),
+    radial-gradient(500px at 50% 80%,rgba(0,255,136,.08),transparent 60%),
+    linear-gradient(180deg,rgba(0,0,0,.65) 0%,rgba(0,0,0,.15) 40%,rgba(0,0,0,.92) 100%)
+}
+#entry.hide{
+  transform:translateY(-115%);
+  opacity:0;
+  pointer-events:none
+}
+.topT{position:relative;z-index:3;text-align:center;animation:fadeIn 1.5s ease}
+.bottomT{position:relative;z-index:3;text-align:center;width:100%;animation:fadeIn 2s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.jar{
+  font-family:Orbitron;
+  font-size:34px;
+  letter-spacing:14px;
+  color:#00e5ff;
+  text-shadow:0 0 20px #00f2ff,0 0 45px #00f2ff88,0 0 80px #00f2ff44;
+  font-weight:800;
+  line-height:1
+}
+.just{
+  font-family:Orbitron;
+  font-size:7.5px;
+  letter-spacing:4.5px;
+  color:#00aaff;
+  margin-top:10px;
+  opacity:.9
+}
+.alwaysT{
+  font-family:Orbitron;
+  font-size:10px;
+  letter-spacing:5.5px;
+  color:#00d8ff;
+  margin-top:22px;
+  position:relative;
+  text-shadow:0 0 10px #00f2ff
+}
+.alwaysT::before{
+  content:'';
+  position:absolute;
+  top:-12px;
+  left:50%;
+  transform:translateX(-50%);
+  width:80px;
+  height:2px;
+  background:linear-gradient(90deg,transparent,#00f2ff,transparent);
+  box-shadow:0 0 15px #00f2ff
+}
+.beat{width:240px;margin:0 auto;filter:drop-shadow(0 0 10px #00f2ff) drop-shadow(0 0 20px #00f2ff44)}
+.iam{font-family:Orbitron;font-size:12px;letter-spacing:7.5px;color:#00aaff;margin-top:26px;font-weight:700}
+.your{font-family:Orbitron;font-size:9px;letter-spacing:5.5px;color:#005a7a;margin-top:8px}
+.bar{width:220px;height:3px;background:rgba(0,242,255,.12);border-radius:99px;margin:22px auto 0;overflow:hidden;border:1px solid rgba(0,242,255,.25);box-shadow:0 0 10px rgba(0,242,255,.15) inset}
+.bar i{display:block;height:100%;width:0%;background:linear-gradient(90deg,#00f2ff,#00ff88,#00f2ff);box-shadow:0 0 15px #00f2ff;background-size:200% 100%;animation:load 3.5s ease forwards,shimmer 2s linear infinite}
+@keyframes load{to{width:100%}}
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+.tap{margin-top:24px;padding:16px 46px;border-radius:99px;border:1.8px solid #00f2ff;background:rgba(0,242,255,.14);color:#00f2ff;font-family:Orbitron;font-size:11.5px;letter-spacing:4.5px;font-weight:800;box-shadow:0 0 30px #00f2ff55,0 0 60px #00f2ff22;animation:glow 2.2s infinite;cursor:pointer}
+@keyframes glow{0%,100%{box-shadow:0 0 20px #00f2ff44,0 0 40px #00f2ff11}50%{box-shadow:0 0 40px #00f2ff88,0 0 80px #00f2ff33}}
+.tap:active{transform:scale(.96)}
+/* ================= MAIN APP BG ================= */
+.bg{position:fixed;inset:0;background:radial-gradient(900px at 15% 10%,#00f2ff20,transparent),radial-gradient(700px at 85% 30%,#7a00ff15,transparent),#020a12;z-index:-1}
+/* ================= PHONE CONTAINER - MORNING PREMIUM GOD DESIGN ================= */
+.phone{
+  width:100%;
+  max-width:420px;
+  background:linear-gradient(180deg,rgba(10,27,48,.97),rgba(4,15,30,.99));
+  border:1.5px solid #00f2ff66;
+  border-radius:36px;
+  padding:16px;
+  margin:12px;
+  box-shadow:0 0 0 1px #00f2ff22 inset,0 0 80px #00f2ff18,0 20px 60px rgba(0,0,0,.6);
+  backdrop-filter:blur(24px);
+  max-height:96vh;
+  overflow:auto;
+  scrollbar-width:none
+}
+.phone::-webkit-scrollbar{display:none}
+.topApp{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  background:linear-gradient(180deg,rgba(12,35,62,.92),rgba(8,22,40,.92));
+  border:1px solid #00f2ff55;
+  border-radius:22px;
+  padding:14px 16px;
+  box-shadow:0 0 25px #00f2ff15 inset
+}
+.logo{
+  width:48px;
+  height:48px;
+  border-radius:14px;
+  background:radial-gradient(circle at 30% 30%,#7afcff,#00b8ff 40%,#0077aa);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  box-shadow:0 0 18px #00f2ff,0 0 40px #00f2ff44;
+  border:1px solid #7afcff88
+}
+.h1{font-family:Orbitron;font-size:20px;letter-spacing:3px;margin:0;font-weight:700}
+.on{font-size:9.5px;letter-spacing:3px;color:#00f2ff;opacity:.85;margin-top:2px}
+.greet{
+  margin-top:14px;
+  background:linear-gradient(180deg,rgba(12,35,62,.92),rgba(8,22,40,.92));
+  border:1px solid #00f2ff55;
+  border-radius:22px;
+  padding:16px 18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 0 20px #00f2ff12 inset
+}
+.greet b{font-size:15.5px;display:block;letter-spacing:.3px}
+.greet span{font-size:11.5px;color:#00f2ff;opacity:.9}
+.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:11px;margin-top:14px}
+.btn{
+  position:relative;
+  background:linear-gradient(180deg,rgba(16,44,77,.92),rgba(9,27,51,.92));
+  border:1px solid #00f2ff55;
+  border-radius:20px;
+  padding:18px 6px;
+  text-align:center;
+  color:#8ef2ff;
+  font-weight:700;
+  font-size:11px;
+  letter-spacing:.5px;
+  cursor:pointer;
+  transition:.18s;
+  box-shadow:0 0 15px #00f2ff0f inset,0 4px 15px rgba(0,0,0,.3)
+}
+.btn i{font-size:26px;display:block;margin-bottom:7px;filter:drop-shadow(0 0 6px #00f2ff)}
+.btn:hover{border-color:#00f2ff99;box-shadow:0 0 20px #00f2ff22 inset,0 0 20px #00f2ff18}
+.btn:active{transform:scale(.95)}
+.btn.active{background:linear-gradient(180deg,#00f2ff,#00b8ff);color:#002233;box-shadow:0 0 22px #00f2ff,0 0 45px #00f2ff66,0 0 0 1px #fff2 inset;font-weight:800}
+.hot{position:absolute;top:-7px;right:-7px;background:linear-gradient(180deg,#ff5a5a,#ff1a1a);color:#fff;font-size:8px;padding:4px 8px;border-radius:99px;font-weight:900;box-shadow:0 3px 12px #ff3b3b99;letter-spacing:.5px;animation:hotPulse 1.5s infinite}
+@keyframes hotPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+.label{color:#00f2ff88;font-size:11px;letter-spacing:2.2px;margin:18px 4px 9px;font-weight:700;display:flex;align-items:center;gap:8px}
+.label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,#00f2ff33,transparent)}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:11px}
+.panel{display:none;margin-top:15px;animation:panelUp .35s cubic-bezier(.2,.8,.2,1)}
+.panel.show{display:block}
+@keyframes panelUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.field{width:100%;padding:15px 16px;border-radius:18px;background:linear-gradient(180deg,#001a33,#00152b);border:1.5px solid #00f2ff33;color:#bff8ff;outline:none;margin:8px 0;font-size:14px;transition:.2s;box-shadow:0 0 0 0 #00f2ff00}
+.field:focus{border-color:#00f2ff99;box-shadow:0 0 0 3px #00f2ff22,0 0 20px #00f2ff15}
+.field::placeholder{color:#5a8fa0}
+.action{width:100%;padding:15px;border-radius:18px;border:0;background:linear-gradient(90deg,#00f2ff,#3b82ff 60%,#00f2ff);background-size:200% 100%;color:#001522;font-weight:900;font-size:14px;letter-spacing:.5px;box-shadow:0 10px 28px #00f2ff44,0 0 0 1px #fff3 inset;cursor:pointer;transition:.2s}
+.action:hover{background-position:100% 0;box-shadow:0 14px 32px #00f2ff55}
+.action:active{transform:scale(.98)}
+.chat{background:linear-gradient(180deg,#001325,#000e1f);border:1px solid #00f2ff14;border-radius:18px;padding:11px;max-height:360px;overflow:auto;margin-top:11px;box-shadow:0 0 20px #00f2ff08 inset}
+.msg{margin:7px 0;padding:11px 13px;border-radius:14px;font-size:13.5px;line-height:1.5;word-break:break-word}
+.ai{background:linear-gradient(180deg,#0a2e1f,#0a281b);border-left:3px solid #00ff88;color:#aaffd0;box-shadow:0 2px 10px #00ff8822}
+.user{background:linear-gradient(180deg,#0a2a52,#081f3d);color:#7afcff;text-align:right;border-right:3px solid #00f2ff}
+img.prev{width:100%;border-radius:18px;margin-top:9px;border:1px solid #00f2ff33;box-shadow:0 8px 25px rgba(0,0,0,.4)}
+.limit{background:linear-gradient(180deg,#fff7a0,#ffdf4a);color:#111;border-radius:18px;padding:16px;border:2px dashed #111;box-shadow:0 6px 20px #ffdf4a44}
+.bottomNav{display:flex;justify-content:space-around;background:linear-gradient(180deg,rgba(12,35,62,.92),rgba(8,22,40,.92));border:1px solid #00f2ff55;border-radius:22px;padding:12px 0;margin-top:18px;box-shadow:0 0 20px #00f2ff12 inset}
+.bnav{color:#7afcff66;font-size:9.5px;text-align:center;font-weight:700;cursor:pointer;transition:.2s;padding:4px 10px;border-radius:12px}
+.bnav i{font-size:20px;display:block;margin-bottom:3px}
+.bnav.active{color:#00f2ff;background:rgba(0,242,255,.1);box-shadow:0 0 15px #00f2ff22 inset}
+.bnav:hover{color:#7afcffcc}
+</style>
+</head>
+<body>
+<div class="bg"></div>
+
+<!-- ================= ULTIMATE ENTRY - TODAY REQUEST + MORNING DESIGN ================= -->
+<div id="entry" onclick="enterApp()">
+<div class="topT">
+<div class="jar">J A R V I S</div>
+<div class="just">JUST A RATHER VERY INTELLIGENT SYSTEM</div>
+<div class="alwaysT">ALWAYS WITH YOU</div>
+</div>
+<div class="bottomT">
+<svg class="beat" viewBox="0 0 200 28"><path d="M0 14 L38 14 L48 4 L58 24 L68 9 L78 19 L88 14 L108 14 M108 14 Q118 14 118 9 Q118 4 128 9 Q138 14 128 19 Q118 24 118 19 Q118 14 128 14 L200 14" fill="none" stroke="#00eaff" stroke-width="1.5" opacity=".95"/></svg>
+<div class="iam">I AM JARVIS</div>
+<div class="your">YOUR AI ASSISTANT</div>
+<div class="bar"><i></i></div>
+<div style="margin-top:12px;font-size:9.5px;letter-spacing:2.5px;color:#00f2ff99;font-family:Orbitron">TAP ANYWHERE TO ENTER • ALL PROMPTS READY • ULTIMATE 600+</div>
+<button class="tap">ENTER JARVIS</button>
+</div>
+</div>
+
+<!-- ================= MAIN APP - ALL MORNING PROMPTS + TODAY HEART ================= -->
+<div class="phone">
+<div class="topApp">
+<div class="logo">⬢</div>
+<div>
+<div class="h1">JARVIS AI</div>
+<div class="on">ONLINE • READY • ULTIMATE 600+ • ALL PROMPTS</div>
+</div>
+<div style="margin-left:auto;width:46px;height:46px;border-radius:99px;background:radial-gradient(#0a2a4a,#001a33);border:1px solid #00f2ff55;display:flex;align-items:center;justify-content:center;box-shadow:0 0 15px #00f2ff33 inset">👤</div>
+</div>
+
+<div class="greet">
+<div><b>Good evening, Commander</b><span>How can i assist you today? All morning prompts + Heart Entry ready!</span></div>
+<button class="btn" style="padding:11px 18px;border-radius:99px" onclick="tab(0)">💬 CHAT</button>
+</div>
+
+<div class="row3">
+<button class="btn" onclick="tab(1)"><i>🔍</i>SEARCH</button>
+<button class="btn" onclick="tab(2)"><i>🌐</i>LANG 38</button>
+<button class="btn" onclick="tab(3)"><i>🎙️</i>VOICE</button>
+</div>
+
+<div class="label">QUICK ACTIONS - MORNING COLLECTION + TODAY HEART ENTRY</div>
+<div class="grid3">
+<button class="btn" onclick="tab(5)"><i>👤</i>FACE</button>
+<button class="btn" onclick="tab(6)"><i>🎓</i>SCHOOL</button>
+<button class="btn" onclick="tab(7)"><i>🌍</i>COUNTRY</button>
+<button class="btn" onclick="tab(8)"><i>🧮</i>CALC</button>
+<button class="btn" onclick="tab(9)"><i>⛅</i>WEATHER</button>
+<button class="btn active" onclick="tab(4)"><i>🖼️</i>PHOTO<span class="hot">HOT</span></button>
+<button class="btn" onclick="tab(10)"><i>📱</i>QR</button>
+<button class="btn" onclick="tab(11)"><i>🛠️</i>TOOLS</button>
+</div>
+
+<!-- ================= PHOTO PANEL - HOT - MORNING FAVORITE ================= -->
+<div id="p4" class="panel show">
+<textarea id="pIn" class="field" rows="2" placeholder="Dd - Iron man suit, army, business suit, superhero..."></textarea>
+<button class="action" onclick="doPhoto()">📸 ULTIMATE හදන්න</button>
+<div id="pRes" class="chat">
+<div class="limit">
+<b>⚠️ pollinations.ai - ULTIMATE MODE</b><br><br>
+<b style="font-size:18px">Free limit reached</b><br>
+1 free image every 45 seconds.<br>
+තප්පර 45ක් ඉන්න! - ALL PROMPTS READY!
+</div>
+</div>
+</div>
+
+<!-- ================= ALL OTHER PROMPTS FROM MORNING ================= -->
+<div id="p0" class="panel"><div id="c0" class="chat"><div class="msg ai">I AM JARVIS ULTIMATE 600+ 💙<br><br>✅ MORNING PROMPTS:<br>• SEARCH • LANG 38 • VOICE • FACE • SCHOOL • COUNTRY • CALC • WEATHER • PHOTO HOT • QR • TOOLS<br><br>✅ TODAY NEW:<br>• HEART REACTOR ENTRY - JARVIS ALWAYS WITH YOU<br>• I AM JARVIS - YOUR AI ASSISTANT<br>• TAP ANYWHERE SYSTEM<br><br>ALL READY COMMANDER!</div></div><textarea id="q0" class="field" rows="2" placeholder="අහන්න Commander..."></textarea><button class="action" onclick="ask()">SEND TO JARVIS</button></div>
+
+<div id="p1" class="panel"><input id="sIn" class="field" placeholder="Search anything..."><button class="action" onclick="doSearch()">🔍 SEARCH GOOGLE STYLE</button><div id="sRes" class="chat"></div></div>
+
+<div id="p2" class="panel">
+<select id="langSel" class="field">
+<option value="si">සිංහල (Sinhala)</option>
+<option value="en">English</option>
+<option value="ta">Tamil - தமிழ்</option>
+<option value="hi">Hindi - हिन्दी</option>
+<option value="ja">Japanese - 日本語</option>
+<option value="all">38 Languages - ALL</option>
+</select>
+<textarea id="trIn" class="field" rows="2" placeholder="Translate anything..."></textarea>
+<button class="action" onclick="doTrans()">🌐 TRANSLATE 38 LANGUAGES</button>
+<div id="trOut" class="chat"></div>
+</div>
+
+<div id="p3" class="panel">
+<select id="voiceSel" class="field"><option value="si-LK">සිංහල Voice</option><option value="en-US">English Voice</option><option value="ta-LK">Tamil Voice</option></select>
+<textarea id="voiceIn" class="field" rows="2" placeholder="කියවන්න..."></textarea>
+<button class="action" onclick="speakVoice()">🎙️ SPEAK LOUD</button>
+<button class="action" style="margin-top:8px;background:linear-gradient(90deg,#ff5a5a,#ff8a00)" onclick="startRec()">🎤 RECORD VOICE</button>
+<div id="voiceRes" class="chat"></div>
+</div>
+
+<div id="p5" class="panel">
+<input type="file" id="fFile" class="field" accept="image/*" onchange="loadImg(this)">
+<textarea id="fIn" class="field" rows="2" placeholder="Style - business suit, army, iron man..."></textarea>
+<button class="action" onclick="doFace()">👤 FACE SWAP ULTIMATE</button>
+<div id="fRes" class="chat"></div>
+</div>
+
+<div id="p6" class="panel"><input id="scIn" class="field" placeholder="පාඩම - Maths, Science, History..."><button class="action" onclick="doSchool()">🎓 LEARN SCHOOL</button><div id="scRes" class="chat"></div></div>
+
+<div id="p7" class="panel"><input id="coIn" class="field" placeholder="රට - Sri Lanka, Japan..."><button class="action" onclick="doCountry()">🌍 ABOUT COUNTRY</button><div id="coRes" class="chat"></div></div>
+
+<div id="p8" class="panel"><input id="calcIn" class="field" placeholder="500*12+80/2"><button class="action" onclick="doCalc()">🧮 CALCULATE ULTIMATE</button><div id="calcRes" class="chat"></div></div>
+
+<div id="p9" class="panel"><input id="wIn" class="field" placeholder="Colombo, Kandy, New York..."><button class="action" onclick="doWeather()">⛅ WEATHER ULTIMATE</button><div id="wRes" class="chat"></div></div>
+
+<div id="p10" class="panel"><input id="qrIn" class="field" placeholder="Link / Text / Phone..."><button class="action" onclick="doQR()">📱 QR GENERATE</button><div id="qrRes" class="chat"></div></div>
+
+<div id="p11" class="panel"><input id="tIn" class="field" placeholder="Any Tool / Any Prompt / Any Idea..."><button class="action" onclick="doTool()">🛠️ MAKE ANY TOOL</button><div id="tRes" class="chat"></div></div>
+
+<div class="bottomNav">
+<div class="bnav active" onclick="tab(4)"><i>🏠</i>HOME</div>
+<div class="bnav" onclick="alert('MODULES - ALL PROMPTS')"><i>▦</i>MODULES</div>
+<div class="bnav" onclick="alert('LOGS - History')"><i>🕒</i>LOGS</div>
+<div class="bnav" onclick="alert('SETTINGS - Ultimate')"><i>⚙️</i>SETTINGS</div>
+</div>
+
+<div style="text-align:center;margin-top:14px;font-size:9px;color:#00f2ff44;letter-spacing:2px;font-family:Orbitron">JARVIS ULTIMATE 600+ • ALL MORNING PROMPTS + HEART ENTRY • ALWAYS WITH YOU 💙</div>
+</div>
+
+<script>
+/* ================= CORE FUNCTIONS - ALL MORNING PROMPTS + TODAY ================= */
+function enterApp(){
+  document.getElementById('entry').classList.add('hide');
+  try{new Audio('https://www.soundjay.com/mechanical/sounds/mechanical-keyboard-01.mp3').play().catch(()=>{})}catch{}
+}
+let last=0,lastUrl='',imgF=null,rec=null;
+function tab(n){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('show'));
+  let el=document.getElementById('p'+n);
+  if(el)el.classList.add('show');
+  document.querySelectorAll('.grid3 .btn,.row3 .btn').forEach(b=>b.classList.remove('active'));
+  if(event&&event.currentTarget)event.currentTarget.classList.add('active');
+}
+function addBox(id,t,c){
+  let b=document.getElementById(id);
+  b.innerHTML+='<div class="msg '+c+'">'+t+'</div>';
+  b.scrollTop=99999;
+}
+function loadImg(i){
+  if(i.files&&i.files[0]){
+    imgF=URL.createObjectURL(i.files[0]);
+    document.getElementById('fRes').innerHTML='<div class=msg ai>📸 Original:<br><img src="'+imgF+'" class=prev></div>';
+  }
+}
+async function askAI(q){
+  let r=await fetch('https://text.pollinations.ai/'+encodeURIComponent(q));
+  return await r.text();
+}
+async function ask(){
+  let q=document.getElementById('q0').value.trim();
+  if(!q)return;
+  addBox('c0',q,'user');
+  document.getElementById('q0').value='';
+  addBox('c0','<i>🤖 JARVIS thinking...</i>','ai');
+  let ans=await askAI(q);
+  document.getElementById('c0').lastChild.remove();
+  addBox('c0',ans,'ai');
+}
+async function doSearch(){
+  let q=document.getElementById('sIn').value;
+  if(!q)return alert('Search type කරන්න!');
+  document.getElementById('sRes').innerHTML='<div class=msg ai>🔍 Searching: '+q+'...</div>';
+  document.getElementById('sRes').innerHTML='<div class=msg ai>'+await askAI('Explain in detail with examples: '+q)+'</div>';
+}
+async function doTrans(){
+  let lang=document.getElementById('langSel').value;
+  let txt=document.getElementById('trIn').value;
+  if(!txt)return;
+  document.getElementById('trOut').innerHTML='<div class=msg ai>🌐 Translating to '+lang+'...</div>';
+  document.getElementById('trOut').innerHTML='<div class=msg ai>'+await askAI('Translate to '+lang+': '+txt)+'</div>';
+}
+function doPhoto(){
+  let s=document.getElementById('pIn').value||'fashion model suit, ultra realistic';
+  let b=document.getElementById('pRes');
+  let now=Date.now();
+  if(now-last<46000){
+    let l=Math.ceil((46000-(now-last))/1000);
+    b.innerHTML='<div class=limit><b>⏳ තත් '+l+' ඉන්න බං! Free limit 45s</b><br>තත් '+l+'කින් ආයේ try කරන්න!<br><br>💡 Tip: එක පාරක් හදලා ඉන්න!</div>';
+    return;
+  }
+  last=now;
+  let url='https://image.pollinations.ai/prompt/'+encodeURIComponent(s+', ultra realistic, 8k, cinematic lighting, highly detailed')+'?nologo=true&seed='+Math.floor(Math.random()*99999)+'&width=768&height=1024';
+  lastUrl=url;
+  b.innerHTML='<div class=msg ai>✨ ULTIMATE හදනවා: <b>'+s+'</b>...<br><br><img src="'+url+'" class=prev onerror="this.outerHTML=`<div class=limit><b>⚠️ Free limit reached</b><br>1 free image every 45 seconds.<br>තත් 50කින් Try කරන්න!<br><small>'+s+'</small></div>`"><br><div style="margin-top:8px;font-size:11px;opacity:.7">Seed: '+Math.floor(Math.random()*99999)+' | Pollinations.ai</div></div>';
+}
+function doFace(){
+  let s=document.getElementById('fIn').value||'business suit ultra realistic';
+  let b=document.getElementById('fRes');
+  if(!imgF){alert('මුලින්ම Photo එකක් දාන්න!');return;}
+  let 
