@@ -394,3 +394,4 @@ function doFace(){
   let b=document.getElementById('fRes');
   if(!imgF){alert('මුලින්ම Photo එකක් දාන්න!');return;}
   let 
+
